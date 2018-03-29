@@ -21,6 +21,8 @@ class Timing {
 	|	Params
 	|	@ start_date 
 	|	@ end_date
+	|	@ steps used to get result based on intervels
+	|	@ ouput_format used to get result in user needed format
 	|
 	**/ 
     
@@ -38,8 +40,9 @@ class Timing {
 	/**
 	|
 	|	This Function Used check given time Occurs between from and to time
-	|	 
-	|	 
+	|	 @ $FromTime is starting timee
+	|	 @ $end Time is Finishing time
+	|	 @ $timetocheck is to  check occurance 
 	|
 	**/
 	
@@ -56,13 +59,13 @@ class Timing {
 	
 	/**
 	|
-	|	This Function Used Sort multi dimentional array by datetime
+	|	This Function Used Sort multi dimentional array by columnkey
 	|	 
 	|	 
 	|
 	**/
 	
-	public function sortBydatetime($FirstArray, $SecondArray, $columnkey) { 
+	public function sortBycolumnkey($FirstArray, $SecondArray, $columnkey) { 
 		$t1 = strtotime($FirstArray[$columnkey]);
 		$t2 = strtotime($SecondArray[$columnkey]);
 		return $t1 - $t2;
