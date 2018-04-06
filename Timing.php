@@ -84,7 +84,7 @@ class Timing {
 		$datetime2 = new DateTime($ToDateTime);
 		$interval1 = $datetime1->diff($datetime2);
 
-		return array('hour'=>$interval1->format('%h');,'min'=>$interval1->format('%i'););
+		return array('hour'=>$interval1->format('%h'),'min'=>$interval1->format('%i'));
 	}
 	
 	/**
